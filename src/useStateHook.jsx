@@ -9,6 +9,7 @@ const useStateHookExample = () => {
   });
 
   const incrementCount = () => {
+    // Passing callback to the useState hook to get the exact value of the state. Coz useState is async by default. So to get the current state using callback.
     setCount((prevCount) => prevCount + 1);
     setCount((prevCount) => prevCount + 1);
   };
