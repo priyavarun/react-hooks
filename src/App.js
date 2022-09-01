@@ -1,16 +1,22 @@
+import React from "react";
 import UseStateHookExample from "./useStateHook";
 import UseEffectHookExample from "./useEffectHook";
-import {Routes, Route, BrowserRouter} from "react-router-dom";
+import UseContextExample from "./useContext";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import ThemeProvider from "./wrappedContextProvider";
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/state" element={<UseStateHookExample />} />
-        <Route path="/effect" element={<UseEffectHookExample />} />
-      </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/state" element={<UseStateHookExample />} />
+            <Route path="/effect" element={<UseEffectHookExample />} />
+            <Route path="/context" element={<UseContextExample />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </div>
   );
 }
