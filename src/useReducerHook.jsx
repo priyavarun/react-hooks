@@ -1,3 +1,4 @@
+// useReducer hook is very similar to useState. Its mainly used to handle state. Its used when the states are quite complex and many actions are associated with it. Similar to Redux the working is.
 import { useState, useReducer } from "react";
 
 const TYPES = {
